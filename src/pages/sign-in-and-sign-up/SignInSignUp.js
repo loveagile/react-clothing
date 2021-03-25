@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 import SignIn from "../../components/sign-in/SignIn";
 import SignUp from "../../components/sign-up/SignUp";
 
-import { SignInAndSignUpContainer } from './sign-in-sign-up';
+import { SignInAndSignUpContainer } from "./sign-in-sign-up";
 
 const SignInSignUp = () => {
   return (
-    <SignInAndSignUpContainer >
+    <SignInAndSignUpContainer>
       <SignIn />
       <SignUp />
     </SignInAndSignUpContainer>

@@ -8,14 +8,14 @@ import { GlobalStyle } from "./App-globalstyles";
 import HomePage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/ShopPage";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/SignInSignUp";
-import CheckoutPage from './pages/checkout/CheckoutPage';
+import CheckoutPage from "./pages/checkout/CheckoutPage";
 
 import Header from "./components/header/Header";
 
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 import { setCurrentUser } from "./redux/user/user.action";
-import { selectCurrentUser } from './redux/user/user-selectors';
+import { selectCurrentUser } from "./redux/user/user-selectors";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -33,9 +33,9 @@ class App extends React.Component {
             ...snapShot.data()
           });
         });
+      } else {
+        setCurrentUser(userAuth);
       }
-
-      setCurrentUser(userAuth);
     });
   }
 

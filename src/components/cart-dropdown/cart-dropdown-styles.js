@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import CustomButton from '../custom-button/CustomButton';
+import styled from "styled-components";
+import CustomButton from "../custom-button/CustomButton";
 
 export const CartDropdownContainer = styled.div`
   position: absolute;
@@ -30,4 +30,3 @@ export const CartItemsContainer = styled.div`
   flex-direction: column;
   overflow-y: scroll;
 `;
-

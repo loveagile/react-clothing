@@ -10,7 +10,6 @@ export const CollectionItemContainer = styled.div`
   position: relative;
 
   &:hover {
-
     .image {
       opacity: 0.8;
       transition: all 0.3s ease-in;
@@ -20,7 +19,6 @@ export const CollectionItemContainer = styled.div`
       opacity: 0.85;
       display: flex;
     }
-
   }
 `;
 

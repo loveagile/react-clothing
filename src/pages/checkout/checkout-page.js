@@ -24,7 +24,7 @@ export const HeaderBlockContainer = styled.div`
   &:last-child {
     width: 8%;
   }
-`
+`;
 
 export const TotalContainer = styled.div`
   margin-top: 30px;

@@ -1,37 +1,37 @@
-import React from "react"
+import React from "react";
 
-import FormInput from "../form-input/FormInput"
-import CustomButton from "../custom-button/CustomButton"
+import FormInput from "../form-input/FormInput";
+import CustomButton from "../custom-button/CustomButton";
 
-import { auth, signInWithGoogle } from "../../firebase/firebase.utils"
+import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 
-import { SignInContainer, SignInTitle, ButtonsBarContainer } from './sign-in-styles';
+import { SignInContainer, SignInTitle, ButtonsBarContainer } from "./sign-in-styles";
 
 class SignIn extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.state = { email: "", password: "" }
+    this.state = { email: "", password: "" };
   }
 
-  handleSubmit = async (event) => {
-    event.preventDefault()
+  handleSubmit = async event => {
+    event.preventDefault();
 
-    const { email, password } = this.state
+    const { email, password } = this.state;
 
     try {
-      await auth.signInWithEmailAndPassword(email, password)
-      this.setState({ email: "", password: "" })
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: "", password: "" });
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
-  handleChange = (event) => {
-    const { value, name } = event.target
+  handleChange = event => {
+    const { value, name } = event.target;
 
-    this.setState({ [name]: value })
-  }
+    this.setState({ [name]: value });
+  };
 
   render() {
     return (
@@ -64,8 +64,8 @@ class SignIn extends React.Component {
           </ButtonsBarContainer>
         </form>
       </SignInContainer>
-    )
+    );
   }
 }
 
-export default SignIn
+export default SignIn;

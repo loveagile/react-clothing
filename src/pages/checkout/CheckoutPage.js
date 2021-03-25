@@ -39,8 +39,11 @@ const CheckoutPage = ({ cartItems, total }) => (
     ))}
     <TotalContainer>TOTAL: ${total}</TotalContainer>
     <WarningContainer>
-      *Please use the following <span style={{ color: "green", fontSize: "30px" }}><em>test credit card </em></span> for
-      payments*
+      *Please use the following{" "}
+      <span style={{ color: "green", fontSize: "30px" }}>
+        <em>test credit card </em>
+      </span>{" "}
+      for payments*
       <br />
       4242 4242 4242 4242 - Exp: 01/20 - CVV: 123
     </WarningContainer>
