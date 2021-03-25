@@ -2,6 +2,23 @@
   "name": "complete-react-course",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "prettify": "prettier src/**/*.js --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "npm run lint:fix"
+  },
   "dependencies": {
     "firebase": "^8.3.1",
     "node-sass": "4.14.1",
@@ -19,17 +36,14 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "husky": "4.3.8",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "react-scripts": "4.0.3"
   },
   "resolutions": {
-    "node-sass": "4.14.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "node-sass": "4.14.1",
+    "husky": "4.3.8"
   },
   "browserslist": [
     ">0.2%",
